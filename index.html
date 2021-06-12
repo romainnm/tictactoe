@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+  <script defer src="./js/script.js"></script>
+</head>
+<body>
+  <div class="overlay-display-winner_disable js-overlay-display-winner">
+    <h2 class="overlay-display-winner__title">Game Over!</h2>
+    <div>
+      <p class="overlay-display-winner__message js-overlay-display-winner-message"></p>
+    </div>
+    <div>
+      <button class="overlay-display-winner__button js-btn-rematch">Rematch</button>
+      <button class="overlay-display-winner__button js-btn-new-game">New Game</button>
+    </div>
+  </div>
+  <div class="game-container">
+    <h1 class="game-container__title">Welcome to<br><span class="game-container__title_big">Tic Tac Toe</span></h1>
+    <form class="players-name-form js-players-name-form">
+      <div>
+        <label for="player1" class="players-name-form__label">Player 1</label>
+        <input type="text" id="player1" class="players-name-form__input_text js-player-one" placeholder="Enter player 1 name" required maxlength="12"> 
+      </div>
+      <div>
+        <label for="player2" class="players-name-form__label">Player 2</label>
+        <input type="text" id="player2" class="players-name-form__input_text js-player-two" placeholder="Enter player 2 name" required maxlength="12">
+      </div>
+      <input type="submit" class="players-name-form__input_submit" value="Start Game">
+    </form>
+    <div class="boardgame-container_disable js-boardgame-container">
+      <div class="display-players js-display-players">
+        <div class="display-players__header">
+          <p>Player 1 : <span class="display-players__header_symbol-color">X</span></p>
+          <p class="display-players__header_vs">VS</p>
+          <p>Player 2 : <span class="display-players__header_symbol-color">O</span></p>
+        </div>
+        <div class="display-players__footer">
+          <p class="display-players__player js-display-player-1"></p>
+          <p class="display-players__player js-display-player-2"></p>
+        </div>
+      </div>
+      <div class="display-player-turn">It's <span class="display-player-turn__name js-display-player-turn-name"></span>turn</div>
+      <div class="board">
+        <div class="board__square js-board-square" data-id="0"></div>
+        <div class="board__square js-board-square" data-id="1"></div>
+        <div class="board__square js-board-square" data-id="2"></div>
+        <div class="board__square js-board-square" data-id="3"></div>
+        <div class="board__square js-board-square" data-id="4"></div>
+        <div class="board__square js-board-square" data-id="5"></div>
+        <div class="board__square js-board-square" data-id="6"></div>
+        <div class="board__square js-board-square" data-id="7"></div>
+        <div class="board__square js-board-square" data-id="8"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
